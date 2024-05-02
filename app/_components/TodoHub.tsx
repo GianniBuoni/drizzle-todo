@@ -22,4 +22,3 @@ const TodoHub = ({ todos }: Props) => {
 };
 
 export default TodoHub;
-const revalidate = dynamic;

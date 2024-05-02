@@ -13,3 +13,4 @@ const HomePage = async () => {
 };
 
 export default HomePage;
+export const revalidate = 0;

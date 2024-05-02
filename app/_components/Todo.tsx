@@ -1,11 +1,10 @@
 "use client";
-import React from "react";
 import { todoType } from "../_lib/definitions";
 import clsx from "clsx";
 import { deleteTodo, toggleTodo } from "../db/todoActions";
 import { useRouter } from "next/navigation";
 import { TiDelete } from "react-icons/ti";
-import { date } from "drizzle-orm/mysql-core";
+import TodoLabel from "./TodoLabel";
 
 interface Props {
   todo: todoType;
@@ -13,6 +12,7 @@ interface Props {
 
 const Todo = ({ todo }: Props) => {
   const router = useRouter();
+
   const todoCard = clsx({
     "flex flex-row space-x-4 items-center card p-4 opacity-80 transition-colors":
       true,
@@ -40,8 +40,8 @@ const Todo = ({ todo }: Props) => {
           onClick={() => handleDelete(todo.id)}
         />
       </div>
-      <div className="cursor-pointer flex flex-row justify-between w-full">
-        <div className="label-text mt-0.5">{todo.text}</div>
+      <div className="flex flex-row justify-between w-full">
+        <TodoLabel todo={todo} />
         {todo.done ? (
           <input
             type="checkbox"
