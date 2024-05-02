@@ -44,6 +44,9 @@ importers:
       react-hook-form:
         specifier: ^7.51.3
         version: 7.51.3(react@18.3.1)
+      react-icons:
+        specifier: ^5.2.0
+        version: 5.2.0(react@18.3.1)
       zod:
         specifier: ^3.23.5
         version: 3.23.5
@@ -1851,6 +1854,11 @@ packages:
     engines: {node: '>=12.22.0'}
     peerDependencies:
       react: ^16.8.0 || ^17 || ^18
+
+  react-icons@5.2.0:
+    resolution: {integrity: sha512-n52Y7Eb4MgQZHsSZOhSXv1zs2668/hBYKfSRIvKh42yExjyhZu0d1IK2CLLZ3BZB1oo13lDfwx2vOh2z9FTV6Q==}
+    peerDependencies:
+      react: '*'
 
   react-is@16.13.1:
     resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==}
@@ -3989,6 +3997,10 @@ snapshots:
       scheduler: 0.23.2
 
   react-hook-form@7.51.3(react@18.3.1):
+    dependencies:
+      react: 18.3.1
+
+  react-icons@5.2.0(react@18.3.1):
     dependencies:
       react: 18.3.1
 
