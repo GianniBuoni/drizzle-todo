@@ -1,32 +1,31 @@
 import React from "react";
 import { todoType } from "../_lib/definitions";
+import clsx from "clsx";
 
 interface Props {
   todo: todoType;
 }
 
 const Todo = ({ todo }: Props) => {
-  if (todo.done)
+  const todoCard = clsx({
+    "form-control card p-5 opacity-80 w-2/5 transition-colors": true,
+    "bg-base-200": todo.done,
+    "bg-accent" : !todo.done
+  });
+
+  const toggleStyles = clsx({"toggle toggle-primary opacity-100": true,});
+
     return (
-      <div className=" form-control card bg-base-200 p-5 opacity-80 w-2/5 transition-colors">
+      <div className={todoCard}>
         <label className="label cursor-pointer">
           <span className="label-text">{todo.text}</span>
-          <input
-            type="checkbox"
-            checked
-            className="toggle toggle-primary opacity-100"
-          />
+          {todo.done
+            ? <input type="checkbox" defaultChecked className={toggleStyles} />
+            : <input type="checkbox" className={toggleStyles} />
+          }
         </label>
       </div>
     );
-  return (
-    <div className=" form-control card bg-accent p-5 opacity-80 w-2/5 transition-colors">
-      <label className="label cursor-pointer">
-        <span className="label-text">{todo.text}</span>
-        <input type="checkbox" className="toggle toggle-primary opacity-100" />
-      </label>
-    </div>
-  );
 };
 
 export default Todo;
