@@ -6,10 +6,11 @@ import { FieldValues, useForm } from "react-hook-form";
 
 const AddTodo = () => {
   const router = useRouter();
-  const { register, handleSubmit } = useForm();
+  const { register, handleSubmit, reset } = useForm();
 
   const onSubmit = async (data: FieldValues) => {
     await axios.post("/api/todos", data);
+    reset();
     router.refresh();
   };
 
