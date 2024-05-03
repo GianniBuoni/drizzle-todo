@@ -16,13 +16,13 @@ const AddTodo = () => {
 
   return (
     <form
-      className="flex w-full mt-3 space-x-2"
+      className="flex justify-between w-full space-x-2 pt-4"
       onSubmit={handleSubmit(onSubmit)}
     >
       <input
         type="text"
-        placeholder="New Todo . . . "
-        className="input input-bordered"
+        placeholder="New to do . . . "
+        className="input input-bordered w-full"
         {...register("text")}
       />
       <button type="submit" className="btn btn-primary">

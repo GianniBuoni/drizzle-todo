@@ -10,14 +10,12 @@ interface Props {
 
 const TodoHub = ({ todos }: Props) => {
   return (
-    <>
-      <div className="space-y-3">
-        {todos.map((todo) => (
-          <Todo key={todo.id} todo={todo} />
-        ))}
-      </div>
+    <div className="space-y-2">
+      {todos.map((todo) => (
+        <Todo key={todo.id} todo={todo} />
+      ))}
       <AddTodo />
-    </>
+    </div>
   );
 };
 

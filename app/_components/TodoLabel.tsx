@@ -25,10 +25,10 @@ const TodoLabel = ({ todo }: Props) => {
 
   if (editing)
     return (
-      <form onSubmit={handleSubmit(handlePost)}>
+      <form onSubmit={handleSubmit(handlePost)} className="w-96">
         <input
           defaultValue={todo.text}
-          className="input input-sm input-bordered"
+          className="input input-sm input-bordered w-full"
           {...register("text")}
         />
       </form>

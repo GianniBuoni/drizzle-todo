@@ -17,7 +17,7 @@ const Todo = ({ todo }: Props) => {
     "flex flex-row space-x-4 items-center card p-4 opacity-80 transition-colors":
       true,
     "bg-base-200": todo.done,
-    "bg-accent": !todo.done,
+    "bg-secondary": !todo.done,
   });
 
   const toggleStyles = clsx({ "toggle toggle-primary opacity-100": true });

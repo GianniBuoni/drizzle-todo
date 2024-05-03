@@ -4,9 +4,9 @@
 
 @layer base {
   main {
-    @apply p-5;
+    @apply p-5 flex flex-col items-center;
   }
   h1 {
-    @apply text-3xl mb-5;
+    @apply text-3xl mb-5 font-extrabold;
   }
 }

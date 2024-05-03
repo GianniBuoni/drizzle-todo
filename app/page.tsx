@@ -5,8 +5,8 @@ import TodoHub from "./_components/TodoHub";
 const HomePage = async () => {
   const data = await getData();
   return (
-    <div>
-      <h1>Todo:</h1>
+    <div className="md:w-2/5">
+      <h1>To Do:</h1>
       <TodoHub todos={data} />
     </div>
   );
